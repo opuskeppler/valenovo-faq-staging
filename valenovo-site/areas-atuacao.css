@@ -1,4 +1,6 @@
 .areas-page { background: var(--paper); }
+.nav-preview-active { color: var(--forest) !important; position: relative; }
+.nav-preview-active::after { content:""; position:absolute; right:0; bottom:-8px; left:0; border-bottom:1px solid var(--gold); }
 .areas-hero { padding: 128px clamp(25px, 7vw, 110px) 74px; background: var(--white); }
 .areas-hero-grid { display:grid; grid-template-columns:1.16fr .55fr; gap:11vw; margin-top:37px; align-items:end; }
 .areas-hero h1, .areas-closing h2 { max-width:780px; margin:0; font:clamp(54px, 6.4vw, 102px)/.89 var(--serif); letter-spacing:-.055em; }
