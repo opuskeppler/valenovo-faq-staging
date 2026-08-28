@@ -493,7 +493,9 @@ footer div {
   align-items: center;
   gap: 11px;
 }
-@media (max-width: 820px) {
+/* Touch devices always use the compact navigation. This prevents a phone from
+   receiving the desktop header if Safari reports an unusual viewport width. */
+@media (max-width: 820px), (hover: none) and (pointer: coarse) {
   .site-header {
     height: 76px;
     grid-template-columns: 1fr auto;
@@ -506,6 +508,7 @@ footer div {
   .mobile-menu { display: block; justify-self: end; }
   .mobile-menu summary { width: 42px; height: 42px; display: grid; place-items: center; cursor: pointer; list-style: none; }
   .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu summary::marker { content: ""; }
   .mobile-menu summary span, .mobile-menu summary span::before, .mobile-menu summary span::after { display: block; width: 21px; height: 1px; background: var(--ink); content: ""; transition: transform .2s ease, opacity .2s ease; }
   .mobile-menu summary span { position: relative; }
   .mobile-menu summary span::before { position: absolute; transform: translateY(-7px); }
