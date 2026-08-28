@@ -76,10 +76,7 @@ footer div span {
   color: var(--ink);
   text-decoration: none;
 }
-.mobile-shortcuts {
-  display: contents;
-}
-.mobile-areas {
+.mobile-menu {
   display: none;
 }
 .button {
@@ -505,23 +502,22 @@ footer div {
   .site-header nav {
     display: none;
   }
-  .mobile-shortcuts {
-    display: flex;
-    align-items: center;
-    justify-self: end;
-    gap: 15px;
-  }
-  .mobile-areas {
-    display: inline-flex;
-    align-items: center;
-    min-height: 32px;
-    color: var(--ink);
-    font: 9px var(--mono);
-    letter-spacing: .1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--gold);
-  }
+  .site-header > .client-access { display: none; }
+  .mobile-menu { display: block; justify-self: end; }
+  .mobile-menu summary { width: 42px; height: 42px; display: grid; place-items: center; cursor: pointer; list-style: none; }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu summary span, .mobile-menu summary span::before, .mobile-menu summary span::after { display: block; width: 21px; height: 1px; background: var(--ink); content: ""; transition: transform .2s ease, opacity .2s ease; }
+  .mobile-menu summary span { position: relative; }
+  .mobile-menu summary span::before { position: absolute; transform: translateY(-7px); }
+  .mobile-menu summary span::after { position: absolute; transform: translateY(7px); }
+  .mobile-menu[open] summary span { background: transparent; }
+  .mobile-menu[open] summary span::before { transform: rotate(45deg); }
+  .mobile-menu[open] summary span::after { transform: rotate(-45deg); }
+  .site-header .mobile-menu nav { display: none; }
+  .site-header .mobile-menu[open] nav { display: grid; position: fixed; z-index: 19; top: 76px; right: 0; left: 0; gap: 0; padding: 8px 23px 20px; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .site-header .mobile-menu nav a { display: flex; align-items: center; min-height: 47px; border-bottom: 1px solid var(--line); color: var(--ink); font: 10px var(--mono); font-weight: 500; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+  .site-header .mobile-menu nav a:last-child { border-bottom: 0; }
+  .site-header .mobile-menu nav .mobile-menu-client { margin-top: 10px; color: var(--forest); }
   .brand img {
     width: 134px;
   }
@@ -657,8 +653,7 @@ footer div {
   .brand img { width: 112px; }
   .brand span { padding-left: 8px; font-size: 8px; letter-spacing: .09em; }
   .client-access { font-size: 8px; letter-spacing: .07em; }
-  .mobile-shortcuts { gap: 10px; }
-  .mobile-areas { min-height: 29px; font-size: 8px; letter-spacing: .07em; }
+  .site-header .mobile-menu[open] nav { top: 72px; padding: 8px 17px 17px; }
   .client-access .access-dot { width: 6px; height: 6px; }
   .hero-copy { padding: 66px 18px 58px; }
   .hero h1, .intro h2, .section-heading h2, .programme h2, .why h2, .team h2, .contact h2 { font-size: clamp(46px, 13.2vw, 57px); }
