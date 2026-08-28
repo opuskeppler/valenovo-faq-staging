@@ -76,6 +76,12 @@ footer div span {
   color: var(--ink);
   text-decoration: none;
 }
+.mobile-shortcuts {
+  display: contents;
+}
+.mobile-areas {
+  display: none;
+}
 .button {
   display: inline-block;
   background: var(--forest);
@@ -499,6 +505,23 @@ footer div {
   .site-header nav {
     display: none;
   }
+  .mobile-shortcuts {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 15px;
+  }
+  .mobile-areas {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    color: var(--ink);
+    font: 9px var(--mono);
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--gold);
+  }
   .brand img {
     width: 134px;
   }
@@ -634,6 +657,8 @@ footer div {
   .brand img { width: 112px; }
   .brand span { padding-left: 8px; font-size: 8px; letter-spacing: .09em; }
   .client-access { font-size: 8px; letter-spacing: .07em; }
+  .mobile-shortcuts { gap: 10px; }
+  .mobile-areas { min-height: 29px; font-size: 8px; letter-spacing: .07em; }
   .client-access .access-dot { width: 6px; height: 6px; }
   .hero-copy { padding: 66px 18px 58px; }
   .hero h1, .intro h2, .section-heading h2, .programme h2, .why h2, .team h2, .contact h2 { font-size: clamp(46px, 13.2vw, 57px); }
