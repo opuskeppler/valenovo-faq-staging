@@ -64,11 +64,7 @@
   font: 34px/0.95 var(--serif);
   letter-spacing: -0.035em;
 }
-.choices {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-}
+.choices { display: grid; grid-template-columns: repeat(3, 82px); gap: 22px; }
 .mark {
   width: 58px;
   height: 58px;
@@ -308,16 +304,8 @@
   .icon-lab h2 {
     font-size: 30px;
   }
-  .choices {
-    grid-column: 2;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  .mark {
-    width: 45px;
-    height: 45px;
-    transform: scale(0.8);
-  }
+  .choices { grid-column: 2; grid-template-columns:repeat(3, 64px); gap:16px; margin-top:16px; }
+  .mark { width:58px; height:58px; transform:none; }
   .legend {
     gap: 13px;
   }
@@ -332,14 +320,8 @@
   .icon-lab {
     padding: 0 18px 68px;
   }
-  .choices {
-    gap: 1px;
-  }
-  .mark {
-    width: 41px;
-    height: 41px;
-    transform: scale(0.74);
-  }
+  .choices { grid-template-columns:repeat(3, 62px); gap:11px; }
+  .mark { width:58px; height:58px; transform:none; }
   .lab-label {
     display: none;
   }

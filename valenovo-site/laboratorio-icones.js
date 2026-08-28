@@ -16,16 +16,15 @@
     'M10 29a19 10 0 1 0 38 0 19 10 0 1 0-38 0'
   ];
   const extras = [
-    (n) => `<circle cx="29" cy="29" r="${23 - n % 5}" class="faint"/>`,
-    (n) => `<path d="M9 ${44 - n % 5}c12 0 15-25 39-29" class="faint"/><circle cx="10" cy="${44 - n % 5}" r="2" class="gold fill"/>`,
-    (n) => `<rect x="${8 + n % 3}" y="${8 + n % 3}" width="${42 - n % 5}" height="${42 - n % 5}" rx="${n % 2 ? 0 : 20}" class="faint"/>`,
-    (n) => `<path d="M10 29h8m22 0h8M29 10v8m0 22v8" class="gold"/>`,
-    (n) => `<circle cx="${13 + n % 5}" cy="15" r="2" class="gold fill"/><circle cx="${45 - n % 5}" cy="43" r="2" class="gold fill"/><path d="M${13 + n % 5} 15 ${45 - n % 5} 43" class="faint"/>`
+    (n) => `<circle cx="29" cy="29" r="23" class="faint"/><circle cx="29" cy="29" r="3" class="gold fill"/>`,
+    (n) => `<path d="M7 ${45 - n % 6}c14 1 16-27 42-31" class="gold"/><path d="m42 9 7 5-7 7"/><circle cx="8" cy="${45 - n % 6}" r="3" class="gold fill"/>`,
+    (n) => `<rect x="8" y="8" width="42" height="42" class="faint"/><path d="M9 29h10m20 0h10M29 9v10m0 20v10" class="gold"/>`
   ];
   document.querySelectorAll('.icon-lab article').forEach((row, area) => {
     row.querySelectorAll('.mark').forEach((mark, option) => {
+      if (option > 2) { mark.remove(); return; }
       const n = area * 5 + option;
-      mark.innerHTML = `<svg viewBox="0 0 58 58" role="img" aria-label="Opção ${'ABCDE'[option]}"><g fill="none" stroke="${green}" stroke-width="1.35" stroke-linecap="square" stroke-linejoin="miter">${extras[option](n)}<path d="${cores[area]}"/>${option % 2 ? '' : '<circle cx="29" cy="29" r="3" class="gold fill"/>'}</g></svg>`;
+      mark.innerHTML = `<svg viewBox="0 0 58 58" role="img" aria-label="Opção ${'ABC'[option]}"><g fill="none" stroke="${green}" stroke-width="1.55" stroke-linecap="square" stroke-linejoin="miter">${extras[option](n)}<path d="${cores[area]}"/></g></svg>`;
     });
   });
 })();
