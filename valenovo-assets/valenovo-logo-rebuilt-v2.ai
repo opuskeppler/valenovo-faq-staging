@@ -1,0 +1,18 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: Valenovo Consulting
+%%Title: Valenovo wordmark (rebuilt from approved reference)
+%%BoundingBox: 0 0 1200 200
+%%LanguageLevel: 2
+%%Pages: 1
+%%EndComments
+/sage { 0.490 0.588 0.455 setrgbcolor } bind def
+/white { 1 1 1 setrgbcolor } bind def
+sage
+24 16 70 168 rectfill 96 16 90 168 rectfill 188 16 35 168 rectfill
+225 16 95 168 rectfill 322 16 80 168 rectfill 404 16 75 168 rectfill
+481 16 58 168 rectfill 541 16 78 168 rectfill
+white
+/Times-Roman findfont 170 scalefont setfont
+36 55 moveto (valenovo) show
+showpage
+%%EOF

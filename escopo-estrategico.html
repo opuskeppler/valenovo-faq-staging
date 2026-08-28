@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AYA PITAYA — Portugal Launch</title>
+  <style>
+    :root { --ink:#253128; --forest:#536d4f; --sage:#83967a; --sage-pale:#e8ede5; --mist:#f2f3f0; --paper:#f9f9f6; --card:#ffffff; --muted:#677169; --line:#d9ded7; --gold:#b78a58; --soft-gold:#eee5d9; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.55 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body::before { content:""; position:fixed; inset:0; z-index:-1; opacity:.42; background:radial-gradient(circle at 8% 0%,#e7ece4 0,transparent 27rem),linear-gradient(120deg,transparent 75%,#eff1ed); }
+    main { max-width:1180px; margin:auto; padding:38px 28px 88px; }
+    .brandbar { display:flex; align-items:center; justify-content:space-between; gap:20px; padding-bottom:23px; border-bottom:1px solid var(--line); }
+    .wordmark-logo { display:block; width:min(290px,56vw); height:auto; mix-blend-mode:multiply; }
+    .brandbar small { color:var(--muted); font-size:10px; font-weight:700; letter-spacing:.15em; text-align:right; text-transform:uppercase; }
+    .exit-link { display:inline-block; padding:9px 12px; border:1px solid var(--forest); color:var(--forest); background:transparent; text-decoration:none; font-size:10px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
+    .eyebrow { color:var(--forest); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { max-width:830px; margin:21px 0 15px; font:400 clamp(48px,7vw,92px)/.86 Baskerville, "Iowan Old Style", "Palatino Linotype", Georgia, serif; letter-spacing:-.075em; }
+    .aya-launch { display:block; font-size:70%; }
+    .intro { max-width:660px; color:var(--muted); font-size:18px; line-height:1.55; }
+    .tag { display:inline-block; margin-top:18px; padding:7px 12px; border:1px solid #bdc7ba; border-radius:999px; color:var(--forest); background:transparent; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .tabbar { display:flex; gap:8px; margin-top:30px; padding-top:16px; border-top:1px solid var(--line); }
+    .tabbar a { padding:9px 14px; border-radius:999px; color:var(--forest); border:1px solid #cdd5ca; background:transparent; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:.04em; }
+    .tabbar a:last-child { background:var(--forest); border-color:var(--forest); color:white; }
+    .phase-one { margin-top:38px; padding:32px; border:1px solid #b6c1b1; border-radius:3px; background:var(--sage-pale); }
+    .phase-one header { display:flex; gap:18px; justify-content:space-between; align-items:flex-start; }
+    .phase-one h2 { margin:8px 0 0; font-size:34px; }
+    .duration { white-space:nowrap; padding:7px 11px; border-radius:999px; background:var(--forest); color:#fff; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .workstreams { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px; }
+    .workstream { padding:18px; border-radius:2px; background:rgba(255,255,255,.68); }
+    .workstream strong { display:block; font-size:14px; }
+    .workstream p { margin:7px 0 0; color:#526057; font-size:13px; }
+    .deliverables { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+    .deliverables div { padding:15px 17px; border-left:2px solid var(--gold); background:rgba(255,255,255,.54); }
+    .delivery-phase { margin-top:38px; padding:34px; border:1px solid var(--line); border-radius:3px; background:var(--card); box-shadow:0 12px 35px rgba(35,49,40,.035); }
+    .delivery-phase.phase-three { background:#eff3ed; }
+    .delivery-phase header { display:flex; gap:18px; align-items:flex-start; justify-content:space-between; }
+    .delivery-phase header p { max-width:720px; margin:8px 0 0; color:var(--muted); font-size:16px; }
+    .delivery-phase h2 { margin:8px 0 0; font-size:34px; }
+    .phase-label { display:inline-block; padding:7px 11px; border-radius:999px; background:var(--forest); color:#fff; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+    .execution-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:22px; }
+    .execution-card { padding:21px; border-radius:2px; background:var(--mist); }
+    .phase-three .execution-card { background:rgba(255,255,255,.72); }
+    .execution-card h3 { margin:0; font-size:16px; }
+    .execution-card p { margin:8px 0 0; color:#526057; font-size:14px; }
+    .execution-card ul { margin:10px 0 0; font-size:14px; }
+    .milestones { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px; }
+    .milestone { padding:17px; border-top:2px solid var(--gold); background:#f5f4f0; }
+    .milestone strong { display:block; font-size:13px; }
+    .milestone p { margin:6px 0 0; color:#526057; font-size:13px; }
+    .phase-note { margin-top:16px; padding:15px 17px; border-left:2px solid var(--forest); background:#edf1eb; color:#41524a; font-size:14px; }
+    .launch { margin-top:42px; }
+    .launch > p { max-width:720px; color:var(--muted); font-size:17px; }
+    .launch-grid { display:grid; grid-template-columns:1.05fr 1fr 1fr; gap:14px; margin-top:18px; }
+    .launch-card { padding:22px; border-radius:3px; background:var(--card); border:1px solid var(--line); }
+    .launch-card h3 { margin:8px 0 10px; font:700 24px/1.05 Georgia,serif; letter-spacing:-.03em; }
+    .launch-card p { margin:0; color:#526057; }
+    .timeline { margin-top:14px; display:grid; gap:8px; }
+    .timeline div { padding:9px 11px; background:#f1f3ed; border-radius:8px; font-size:13px; }
+    .scope { margin-top:44px; }
+    .scope > p { max-width:760px; color:var(--muted); font-size:17px; }
+    .scope-table { margin-top:18px; overflow:hidden; border:1px solid var(--line); border-radius:3px; background:var(--card); }
+    .scope-row { display:grid; grid-template-columns:150px 1fr 1fr; gap:18px; padding:20px; border-bottom:1px solid var(--line); }
+    .scope-row:last-child { border-bottom:0; }
+    .scope-row b { font-size:14px; }
+    .scope-row p { margin:0; color:#526057; font-size:14px; }
+    .scope-row ul { margin:0; font-size:14px; }
+    .roles { margin-top:16px; padding:24px; border-radius:3px; background:var(--soft-gold); }
+    .roles p { margin:7px 0; color:#4f5d57; }
+    .pricing { margin-top:44px; padding:36px; border-radius:3px; color:#f7f7ef; background:var(--forest); }
+    .pricing .eyebrow { color:#d9e3d2; }
+    .pricing h2 { margin:8px 0 5px; font-size:36px; }
+    .pricing > p { max-width:720px; color:#c4cec5; font-size:17px; }
+    .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px; }
+    .price-card { padding:20px; border-radius:2px; background:#415b40; }
+    .price-card strong { display:block; color:#fbfaf5; font-size:30px; letter-spacing:-.05em; font-family:Baskerville, "Iowan Old Style", Georgia, serif; font-weight:400; }
+    .price-card span { display:block; margin-top:6px; color:#f6f6ef; font-size:14px; font-weight:800; }
+    .price-card p { margin:7px 0 0; color:#b8c3bb; font-size:13px; }
+    .total { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-top:20px; padding-top:18px; border-top:1px solid #4b5b55; }
+    .total small { color:#b8c3bb; }
+    .total b { color:#fff; font:400 44px/.9 Baskerville, "Iowan Old Style", Georgia, serif; letter-spacing:-.06em; }
+    .terms { margin-top:18px; color:#cad2ca; font-size:14px; }
+    .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:44px; }
+    .objectives-title { margin:48px 0 -24px; color:var(--forest); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .phase { min-height:275px; padding:23px; border:1px solid var(--line); border-radius:3px; background:var(--card); }
+    .n { color:var(--gold); font-weight:700; font-size:10px; letter-spacing:.13em; }
+    h2 { margin:10px 0; font:400 29px/1 Baskerville, "Iowan Old Style", Georgia, serif; letter-spacing:-.045em; }
+    ul { margin:15px 0 0; padding-left:18px; color:#44534d; }
+    li { margin:7px 0; }
+    .outcome { margin-top:42px; padding:34px; border-radius:3px; background:var(--ink); color:#f5f5ee; }
+    .outcome h2 { font-size:30px; }
+    .outcome p { max-width:760px; margin:8px 0 0; color:#c7d0c9; font-size:17px; }
+    .outcome .signature { margin-top:24px; color:#f5f5ee; font-size:14px; line-height:1.6; }
+    .questions { margin-top:28px; padding:24px; border-left:2px solid var(--gold); background:#eef1ec; }
+    .questions h3 { margin:0 0 12px; font-size:16px; }
+    .questions ol { margin:0; padding-left:21px; }
+    @media (max-width:900px) { .grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:700px) { .launch-grid,.execution-grid,.milestones { grid-template-columns:1fr; } .delivery-phase header { display:block; } .phase-label { margin-top:12px; } }
+    @media (max-width:700px) { .scope-row { grid-template-columns:1fr; gap:9px; } }
+    @media (max-width:700px) { .price-grid { grid-template-columns:1fr; } .total { display:block; } .total b { display:block; margin-top:6px; } }
+    @media (max-width:560px) { main { padding:26px 18px; } .brandbar { align-items:flex-start; flex-wrap:wrap; } .brandbar small { max-width:120px; line-height:1.35; } .exit-link { width:100%; text-align:center; } .grid,.workstreams,.deliverables { grid-template-columns:1fr; } .phase-one header { display:block; } .duration { display:inline-block; margin-top:12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="brandbar">
+      <a href="valenovo-site/index.html" aria-label="Voltar ao site Valenovo"><img class="wordmark-logo" src="valenovo-assets/valenovo-logo-transparent.png?v=approved-1" alt="Valenovo" /></a>
+      <small>Consulting &amp; Advisoring<br>Portugal · Europe</small>
+      <a class="exit-link" href="valenovo-site/index.html">Voltar ao site Valenovo ↗</a>
+    </header>
+    <div class="eyebrow" style="margin-top:38px">Valenovo Consulting &amp; Advisoring · Estratégia de entrada · Portugal → Europa</div>
+    <h1>AYA PITAYA<br><span class="aya-launch">Portugal Launch</span></h1>
+    <p class="intro">Uma implantação ponta a ponta: transformamos uma marca brasileira digitalmente forte numa operação Europa legalmente sólida, comercialmente clara e pronta a vender.</p>
+    <nav class="tabbar" aria-label="Navegação do programa"><a href="#scope">Escopo de execução</a><a href="#financial">Proposta financeira</a></nav>
+
+    <section class="scope" id="scope">
+      <div class="eyebrow">Proposta de assessoria · implantação ponta a ponta</div>
+      <h2>Da decisão de entrada à operação pronta a vender.</h2>
+      <p>O serviço combina estratégia, gestão de projeto e coordenação de especialistas. A AYA PITAYA contrata uma liderança local para transformar a expansão numa operação executável — não apenas para receber recomendações.</p>
+      <div class="scope-table">
+        <article class="scope-row"><b>0 · Mobilização<br><small>semana 1</small></b><p>Estrutura de projeto, recolha documental e alinhamento entre fundador, equipa brasileira e parceiros locais.</p><ul><li>sessão de arranque;</li><li>questionário e data room;</li><li>governança, calendário e decisões.</li></ul></article>
+        <article class="scope-row"><b>1 · Plano de entrada<br><small>semanas 1–6</small></b><p>Diagnóstico de mercado, negócio e operação; definição do modelo recomendado para Portugal e para a futura expansão europeia.</p><ul><li>business plan e modelo financeiro;</li><li>preço, margens e orçamento;</li><li>roadmap de 12 meses e metas de lançamento.</li></ul></article>
+        <article class="scope-row"><b>2 · Empresa & conformidade<br><small>semanas 4–16</small></b><p>Preparação e coordenação da abertura da estrutura portuguesa e dos requisitos necessários para operar legalmente.</p><ul><li>comparação de estrutura societária;</li><li>coordenação de advogado e contabilista certificado;</li><li>conta bancária, registos, atividade, IVA (Imposto sobre o Valor Acrescentado) e obrigações de produto/embalagem.</li></ul></article>
+        <article class="scope-row"><b>3 · Fiscal, importação & operação<br><small>semanas 8–22</small></b><p>Desenho do fluxo Brasil–Portugal e das regras operacionais antes da chegada do primeiro stock.</p><ul><li>custo posto em Portugal e documentação de importação;</li><li>despachante aduaneiro, logística e devoluções;</li><li>processo de faturação, contabilidade e controlo de stock.</li></ul></article>
+        <article class="scope-row"><b>4 · Base comercial<br><small>semanas 12–24</small></b><p>Preparação dos ativos e processos necessários para abrir vendas em março de 2027.</p><ul><li>e-commerce localizado, pagamentos e apoio ao cliente;</li><li>catálogo inicial, preço e materiais de marca;</li><li>plano de lançamento e aquisição de clientes.</li></ul></article>
+        <article class="scope-row"><b>5 · Lançamento assistido<br><small>março–maio de 2027</small></b><p>Acompanhamento semanal dos primeiros 90 dias para corrigir rapidamente o que os dados e a operação revelarem.</p><ul><li>painel de vendas, margem, stock e marketing;</li><li>reunião semanal de decisão;</li><li>revisão de canais e plano de escala.</li></ul></article>
+      </div>
+      <div class="roles"><strong>Modelo de equipa e responsabilidades</strong><p><b>Marcus Sartori · Managing Partner, Market Entry & Implementation:</b> estratégia de entrada, arquitetura operacional, parceiros locais, cronograma e execução Europa.</p><p><b>Rodrigo Tedim · Managing Partner, Growth, Brand & Client Strategy:</b> posicionamento e adaptação de marca, estratégia de crescimento, marketing de lançamento, comunicação e relação executiva com o cliente.</p><p><b>AYA PITAYA:</b> fornecimento de dados, aprovação atempada, orçamento, produto, stock e decisões do fundador.</p><p><b>Especialistas externos:</b> advogado, contabilista certificado, despachante aduaneiro, operador logístico, tecnologia e outros serviços técnicos. Rodrigo e Marcus assumem directamente a operação do projecto, o contacto e a coordenação com estes especialistas; os honorários e custos técnicos são contratados à parte.</p></div>
+    </section>
+
+    <section class="phase-one">
+      <header><div><div class="n">FASE 1 · PRODUTO DE DECISÃO</div><h2>Diagnóstico & plano de entrada</h2></div><span class="duration">4–6 semanas</span></header>
+      <div class="workstreams">
+        <article class="workstream"><strong>01 · Mercado & posicionamento</strong><p>Cliente-alvo, concorrência, categorias, proposta de valor local, gama inicial e adaptação da marca para Portugal.</p></article>
+        <article class="workstream"><strong>02 · Viabilidade financeira</strong><p>Custos de chegada, impostos, margens, preço de venda, orçamento de lançamento e cenários de ponto de equilíbrio.</p></article>
+        <article class="workstream"><strong>03 · Estrutura & conformidade</strong><p>Alternativas de entrada, requisitos societários/fiscais, rotulagem, embalagem, produto, logística e mapa de especialistas.</p></article>
+        <article class="workstream"><strong>04 · Operação</strong><p>Fluxo Brasil → Portugal, stock inicial, armazenamento, expedição, devoluções, atendimento e responsabilidades.</p></article>
+        <article class="workstream"><strong>05 · Canais & lançamento</strong><p>Sequência DTC (venda direta ao consumidor), B2B (venda a empresas/retalho), parceiros, calendário de lançamento e aquisição de clientes.</p></article>
+        <article class="workstream"><strong>06 · Decisão de investimento</strong><p>Roadmap de 12 meses, equipa mínima, riscos, KPIs (indicadores-chave de desempenho) e decisão de avançar, ajustar ou parar.</p></article>
+      </div>
+      <div class="deliverables">
+        <div><strong>Entregável principal</strong><br>Plano de entrada Portugal 2026–27, com recomendações priorizadas e plano de ação.</div>
+        <div><strong>Decisões fechadas</strong><br>Modelo legal, catálogo inicial, preço, canal prioritário, operação logística, orçamento e metas dos primeiros 90 dias.</div>
+      </div>
+    </section>
+
+    <section class="delivery-phase" id="phase-two">
+      <header><div><div class="n">FASE 2 · PRODUTO DE IMPLANTAÇÃO</div><h2>Implantação da Base Portuguesa</h2><p>Seis meses para converter as decisões aprovadas na Fase 1 numa estrutura portuguesa capaz de importar, vender, faturar, servir clientes e receber o primeiro stock antes do lançamento.</p></div><span class="phase-label">setembro 2026 — fevereiro 2027</span></header>
+      <div class="execution-grid">
+        <article class="execution-card"><h3>01 · Empresa, fiscalidade e conformidade</h3><p>Coordenação da constituição e preparação da entidade local, sempre com atos formais executados pelos especialistas habilitados.</p><ul><li>brief e comparação final de estrutura societária; </li><li>seleção, contratação e gestão de advogado e contabilista certificado;</li><li>mapa de abertura, atividade, IVA (Imposto sobre o Valor Acrescentado), faturação, obrigações contabilísticas e calendário fiscal;</li><li>levantamento de requisitos de produto, embalagem, rotulagem, marca, contratos e seguros aplicáveis.</li></ul></article>
+        <article class="execution-card"><h3>02 · Importação, logística e operação</h3><p>Desenho, teste documental e validação do fluxo Brasil → Portugal antes de comprometer o primeiro lote de stock.</p><ul><li>custo posto em Portugal por produto, incluindo transporte, direitos, impostos e taxas;</li><li>seleção e coordenação de despachante aduaneiro e operador logístico;</li><li>processo de compra, importação, receção, armazenamento, expedição, devoluções e inventário;</li><li>checklist documental e plano de contingência para atrasos, ruturas e devoluções.</li></ul></article>
+        <article class="execution-card"><h3>03 · Base comercial e sistemas</h3><p>Preparação da infraestrutura mínima para vender localmente com uma experiência de marca coerente e controlo operacional.</p><ul><li>especificação e coordenação do e-commerce localizado, pagamentos, faturação e políticas de entrega/devolução;</li><li>catálogo de lançamento, arquitetura de preço, margens e packs;</li><li>processos de apoio ao cliente, gestão de encomendas e controlo de stock;</li><li>painel inicial de vendas, margem, aquisição, stock e qualidade de serviço.</li></ul></article>
+        <article class="execution-card"><h3>04 · Equipa, parceiros e prontidão de lançamento</h3><p>Definição de quem faz o quê para que a operação não dependa informalmente dos sócios após o lançamento.</p><ul><li>organograma mínimo, funções, responsabilidades e matriz de aprovações;</li><li>seleção e onboarding de fornecedores prioritários;</li><li>plano de marketing e calendário de pré-lançamento;</li><li>simulação ponta a ponta: encomenda, pagamento, faturação, expedição, apoio e devolução.</li></ul></article>
+      </div>
+      <div class="milestones"><div class="milestone"><strong>Objetivo 1 · Estrutura pronta</strong><p>Entidade, parceiros críticos, mapa fiscal e requisitos de conformidade definidos e em curso.</p></div><div class="milestone"><strong>Objetivo 2 · Operação pronta</strong><p>Fluxo de importação fechado, sistemas configurados e processos testados antes da chegada do stock.</p></div><div class="milestone"><strong>Objetivo 3 · Go-live aprovado</strong><p>Catálogo, preço, stock, e-commerce, atendimento e plano de lançamento validados para março.</p></div></div>
+      <div class="deliverables"><div><strong>Entregáveis da Fase 2</strong><br>Dossier de implantação, mapa de parceiros, modelo operacional, manual de processos, checklist de importação e prontidão de lançamento.</div><div><strong>Cadência de execução</strong><br>Reunião semanal de projeto, controlo de decisões, plano de ação atualizado e reporte executivo mensal.</div></div>
+      <p class="phase-note"><b>Limite de responsabilidade:</b> a Valenovo lidera o projeto, especifica, seleciona e coordena. Registos, pareceres, contabilidade, despachos aduaneiros, tecnologia e contratação de fornecedores são executados e faturados pelos respetivos profissionais e prestadores.</p>
+    </section>
+
+    <section class="delivery-phase phase-three" id="phase-three">
+      <header><div><div class="n">FASE 3 · PRODUTO DE LANÇAMENTO</div><h2>Lançamento Assistido</h2><p>Noventa dias de direção executiva para transformar o primeiro stock e os primeiros clientes em aprendizagem real, protegendo margem, serviço e capacidade de reposição.</p></div><span class="phase-label">março — maio 2027</span></header>
+      <div class="execution-grid">
+        <article class="execution-card"><h3>01 · Go-live e controlo diário</h3><p>Coordenação intensiva nas primeiras semanas para garantir que a operação funciona como foi desenhada.</p><ul><li>checklist final de abertura e ativação dos canais aprovados;</li><li>monitorização de pagamentos, encomendas, faturação, expedição, devoluções e apoio ao cliente;</li><li>triagem e resolução coordenada de falhas críticas;</li><li>ajustes rápidos de processos, informação de produto e comunicação ao cliente.</li></ul></article>
+        <article class="execution-card"><h3>02 · Crescimento e conversão</h3><p>Otimização da procura sem sacrificar margem nem criar uma promessa de vendas artificiais.</p><ul><li>acompanhamento do plano de lançamento, conteúdos e aquisição;</li><li>leitura de conversão, ticket médio, custo de aquisição e repetição;</li><li>testes priorizados de oferta, preço, bundles e mensagens;</li><li>recomendação de canais seguintes com base em dados, não em opinião.</li></ul></article>
+        <article class="execution-card"><h3>03 · Margem, stock e serviço</h3><p>Disciplina operacional para crescer sem imobilizar capital em stock errado ou degradar a experiência do cliente.</p><ul><li>revisão semanal de margem por produto/canal e custos reais;</li><li>alertas de stock, reposição, produtos lentos e necessidade de nova importação;</li><li>acompanhamento de entregas, devoluções, reclamações e qualidade de serviço;</li><li>decisões de correção com o fundador e a equipa.</li></ul></article>
+        <article class="execution-card"><h3>04 · Transferência e escala</h3><p>Fecho dos primeiros 90 dias com uma decisão disciplinada sobre continuidade e expansão europeia.</p><ul><li>rotina de gestão e painel de indicadores entregue à equipa;</li><li>revisão de desempenho face ao business plan;</li><li>plano de 6–12 meses: otimizar Portugal, ampliar canais ou preparar outro mercado;</li><li>recomendação sobre reforço de equipa, stock e próximos investimentos.</li></ul></article>
+      </div>
+      <div class="milestones"><div class="milestone"><strong>Mês 1 · Estabilizar</strong><p>Corrigir fricções de lançamento e garantir operação, serviço e reporting confiáveis.</p></div><div class="milestone"><strong>Mês 2 · Otimizar</strong><p>Melhorar conversão, margem e reposição com base nos primeiros dados.</p></div><div class="milestone"><strong>Mês 3 · Decidir escala</strong><p>Fechar plano de continuidade e requisitos para a próxima etapa europeia.</p></div></div>
+      <div class="deliverables"><div><strong>Entregáveis da Fase 3</strong><br>Painel executivo, atas de decisão semanais, relatório de primeiros 90 dias e plano de crescimento de 6–12 meses.</div><div><strong>Ritmo de gestão</strong><br>Reunião semanal de decisão com os Managing Partners, mais acompanhamento operacional proporcional à intensidade do lançamento.</div></div>
+      <p class="phase-note"><b>Resultado da Fase 3:</b> uma operação Europa em funcionamento, com dados reais para decidir como consolidar Portugal e quando expandir para outro mercado europeu.</p>
+    </section>
+
+    <section class="pricing" id="financial">
+      <div class="eyebrow">Proposta financeira</div>
+      <h2>Investimento na internacionalização</h2>
+      <p>Programa completo liderado por Rodrigo Tedim e Marcus Sartori, da decisão de entrada ao acompanhamento dos primeiros 90 dias de operação.</p>
+      <div class="price-grid">
+        <article class="price-card"><strong>€9.000</strong><span>Fase 1 · Diagnóstico e plano de entrada</span><p>4–6 semanas. 60% na adjudicação e 40% na entrega.</p></article>
+        <article class="price-card"><strong>€27.000</strong><span>Fase 2 · Implantação da base Europa</span><p>6 mensalidades de €4.500, de setembro de 2026 a fevereiro de 2027. Estrutura, parceiros, operação e base comercial.</p></article>
+        <article class="price-card"><strong>€18.000</strong><span>Fase 3 · Lançamento assistido</span><p>3 mensalidades de €6.000, de março a maio de 2027. Acompanhamento executivo e optimização nos primeiros 90 dias.</p></article>
+      </div>
+      <div class="total"><small>Investimento total do programa</small><b>€54.000</b></div>
+      <p class="terms"><b>Investimento complementar:</b> Imposto sobre o Valor Acrescentado (IVA), quando aplicável, e custos de terceiros — advogado, contabilista certificado, registos, conta bancária, seguros, impostos, despachante aduaneiro, operador logístico, stock, tecnologia, publicidade e produção de conteúdos.</p>
+    </section>
+
+    <p class="objectives-title">Resumo de objetivos</p>
+    <section class="grid">
+      <article class="phase"><div class="n">01 · Diagnóstico & decisão</div><h2>Entrada certa</h2><ul><li>Diagnóstico de marca, catálogo e preço</li><li>Estudo de mercado e concorrência</li><li>Modelo de entrada e roadmap</li><li>Business case Portugal → UE</li></ul></article>
+      <article class="phase"><div class="n">02 · Fundação local</div><h2>Base operacional</h2><ul><li>Estrutura societária e parceiros locais</li><li>Fiscalidade, IVA e conformidade</li><li>Marca, contratos e seguros</li><li>Logística, stock e devoluções</li></ul></article>
+      <article class="phase"><div class="n">03 · Go-to-market</div><h2>Vender em Portugal</h2><ul><li>Estratégia de preço e margens</li><li>E-commerce e pagamentos locais</li><li>Canais: DTC, retalho e parceiros</li><li>Plano de lançamento e creators</li></ul></article>
+      <article class="phase"><div class="n">04 · Execução & escala</div><h2>Operar e aprender</h2><ul><li>Coordenação de fornecedores</li><li>KPIs e cadência semanal</li><li>Otimização dos primeiros 90 dias</li><li>Preparação para Espanha/UE</li></ul></article>
+    </section>
+
+    <section class="outcome"><h2>Obrigado por considerarem a Valenovo.</h2><p>Estamos prontos para transformar a força criativa e comercial da AYA PITAYA numa operação Europa sólida, desejada e preparada para crescer. Conduzimos esta entrada com proximidade, critério e liderança executiva, para que cada decisão abra caminho à próxima conquista.</p><p>Ficamos inteiramente disponíveis para esclarecer dúvidas e ajustar o projecto à medida que surjam novos inputs ou necessidades.</p><p class="signature">Rodrigo Tedim<br>Managing Partner · Growth, Brand &amp; Client Strategy<br><br>Marcus Sartori<br>Managing Partner · Market Entry &amp; Implementation</p></section>
+  </main>
+</body>
+</html>

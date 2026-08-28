@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valenovo — Brand Guideline</title>
+  <style>
+    :root { --forest:#536d4f; --ink:#253128; --sage:#83967a; --pale:#e8ede5; --paper:#f9f9f6; --mist:#f2f3f0; --gold:#b78a58; --line:#d9ded7; --muted:#687168; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.55 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(1120px,calc(100% - 48px)); margin:auto; padding:42px 0 80px; }
+    .top { display:flex; align-items:center; justify-content:space-between; gap:20px; padding-bottom:25px; border-bottom:1px solid var(--line); }
+    .logo { width:min(340px,62vw); height:auto; mix-blend-mode:multiply; }
+    .top small,.eyebrow { color:var(--forest); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .top small { text-align:right; color:var(--muted); }
+    h1,h2 { font-family:Baskerville,"Iowan Old Style","Palatino Linotype",Georgia,serif; font-weight:400; letter-spacing:-.055em; }
+    h1 { margin:52px 0 13px; font-size:clamp(48px,7vw,90px); line-height:.88; }
+    h2 { margin:0 0 12px; font-size:30px; line-height:1; }
+    .lead { max-width:670px; color:var(--muted); font-size:19px; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:42px; }
+    .card { padding:27px; border:1px solid var(--line); background:white; }
+    .card.dark { color:white; border-color:var(--forest); background:var(--forest); }
+    .card.dark p { color:#dce5d8; }
+    p { margin:0; color:var(--muted); }
+    .colors { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:20px; }
+    .swatch { min-height:130px; padding:12px; display:flex; flex-direction:column; justify-content:flex-end; font-size:11px; font-weight:700; }
+    .swatch span { margin-top:3px; opacity:.76; font-weight:500; }
+    .type { margin-top:18px; padding-top:18px; border-top:1px solid var(--line); }
+    .serif { font:400 clamp(31px,4vw,48px)/.98 Baskerville,"Iowan Old Style",Georgia,serif; letter-spacing:-.055em; }
+    .sans { margin-top:13px; font-size:14px; letter-spacing:.02em; }
+    .rules { margin:18px 0 0; padding-left:18px; color:var(--muted); }
+    .rules li { margin:8px 0; }
+    .lockup { margin-top:18px; padding:34px; background:var(--mist); }
+    .lockup img { width:min(330px,100%); height:auto; mix-blend-mode:multiply; }
+    @media (max-width:680px) { main{width:min(100% - 36px,1120px);padding-top:26px}.grid{grid-template-columns:1fr}.colors{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start}.top small{max-width:110px;line-height:1.35} }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="top"><img class="logo" src="valenovo-assets/valenovo-logo-transparent.png?v=approved-1" alt="Valenovo" /><small>Brand Guideline<br>v1.1 · agosto 2026</small></header>
+    <div class="eyebrow" style="margin-top:42px">Valenovo Consulting</div>
+    <h1>Uma identidade calma,<br>precisa e europeia.</h1>
+    <p class="lead">A Valenovo deve comunicar clareza estratégica e execução cuidada. A marca é sofisticada sem ser fria: uma presença serena para marcas que entram na Europa.</p>
+    <section class="grid">
+      <article class="card"><div class="eyebrow">01 · Logótipo</div><h2>Original, sem alterações.</h2><p>Usar sempre o ficheiro master aprovado. Não redesenhar, alterar a tipografia, esticar, aplicar efeitos, contornos ou cores fora das versões aprovadas.</p><div class="lockup"><img src="valenovo-assets/valenovo-logo-transparent.png?v=approved-1" alt="Valenovo" /></div></article>
+      <article class="card dark"><div class="eyebrow" style="color:#dce5d8">02 · Tom</div><h2>Estratégia com serenidade.</h2><p>Direta, competente e humana. Evitar linguagem corporativa vazia, excesso de promessas e estética tecnológica agressiva.</p><ul class="rules" style="color:#dce5d8"><li>Clara, internacional e pragmática.</li><li>Premium através de contenção, não de ostentação.</li><li>Focada em método, confiança e resultados concretos.</li></ul></article>
+      <article class="card" style="grid-column:1/-1"><div class="eyebrow">03 · Paleta cromática</div><h2>Natureza estruturada.</h2><div class="colors"><div class="swatch" style="background:#536d4f;color:white">Forest<span>#536D4F</span></div><div class="swatch" style="background:#83967a;color:#172016">Sage<span>#83967A</span></div><div class="swatch" style="background:#e8ede5;color:#253128">Sage Pale<span>#E8EDE5</span></div><div class="swatch" style="background:#b78a58;color:white">Gold<span>#B78A58</span></div><div class="swatch" style="background:#f9f9f6;color:#253128;border:1px solid #d9ded7">Paper<span>#F9F9F6</span></div></div></article>
+      <article class="card"><div class="eyebrow">04 · Tipografia</div><h2>Editorial, nunca ornamental.</h2><div class="type"><div class="serif">Baskerville / Georgia</div><div class="sans">Interface e corpo: system sans-serif — legível, discreta e funcional.</div></div></article>
+      <article class="card"><div class="eyebrow">05 · Direção visual</div><h2>Espaço, textura e precisão.</h2><ul class="rules"><li>Fundos claros e respiração generosa.</li><li>Verde-forest para pontos de autoridade.</li><li>Dourado apenas como acento editorial.</li><li>Fotografia natural, materiais reais e luz suave.</li></ul></article>
+    </section>
+  </main>
+</body>
+</html>
