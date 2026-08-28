@@ -520,7 +520,7 @@ footer div {
   .site-header .mobile-menu[open] nav { display: grid; position: fixed; z-index: 19; top: 76px; right: 0; left: 0; gap: 0; padding: 8px 23px 20px; background: var(--paper); border-bottom: 1px solid var(--line); }
   .site-header .mobile-menu nav a { display: flex; align-items: center; min-height: 47px; border-bottom: 1px solid var(--line); color: var(--ink); font: 10px var(--mono); font-weight: 500; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
   .site-header .mobile-menu nav a:last-child { border-bottom: 0; }
-  .site-header .mobile-menu nav .mobile-menu-client { margin-top: 10px; color: var(--forest); }
+  .site-header .mobile-menu nav .mobile-menu-client { margin-top: 10px; color: var(--gold); }
   .brand img {
     width: 134px;
   }
