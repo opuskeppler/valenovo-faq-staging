@@ -566,7 +566,8 @@ footer div {
     grid-template-columns: 1fr;
   }
   .hero-copy {
-    padding: 78px 23px 72px;
+    /* Keep the first editorial line 66px below the compact header, as in the approved mobile composition. */
+    padding: 66px 23px 72px;
   }
   .hero h1 {
     font-size: 64px;
