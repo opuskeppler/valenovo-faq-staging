@@ -108,7 +108,8 @@ footer div span {
   grid-template-columns: 1.22fr 0.78fr;
 }
 .hero-copy {
-  padding: clamp(80px, 10vw, 145px) clamp(25px, 7vw, 110px) 70px;
+  /* The editorial line begins 66px after the fixed header on every viewport. */
+  padding: 66px clamp(25px, 7vw, 110px) 70px;
 }
 .eyebrow {
   color: #607062;
@@ -566,7 +567,7 @@ footer div {
     grid-template-columns: 1fr;
   }
   .hero-copy {
-    /* Keep the first editorial line 66px below the compact header, as in the approved mobile composition. */
+    /* Keep the first editorial line 66px below the compact header. */
     padding: 66px 23px 72px;
   }
   .hero h1 {
