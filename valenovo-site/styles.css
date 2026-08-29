@@ -108,8 +108,8 @@ footer div span {
   grid-template-columns: 1.22fr 0.78fr;
 }
 .hero-copy {
-  /* The editorial line begins 66px after the fixed header on every viewport. */
-  padding: 66px clamp(25px, 7vw, 110px) 70px;
+  /* The editorial line begins 96px after the fixed header on every viewport. */
+  padding: 96px clamp(25px, 7vw, 110px) 70px;
 }
 .eyebrow {
   color: #607062;
@@ -567,8 +567,8 @@ footer div {
     grid-template-columns: 1fr;
   }
   .hero-copy {
-    /* Keep the first editorial line 66px below the compact header. */
-    padding: 66px 23px 72px;
+    /* Keep the first editorial line 96px below the compact header. */
+    padding: 96px 23px 72px;
   }
   .hero h1 {
     font-size: 64px;
@@ -660,7 +660,7 @@ footer div {
   .client-access { font-size: 8px; letter-spacing: .07em; }
   .site-header .mobile-menu[open] nav { top: 72px; padding: 8px 17px 17px; }
   .client-access .access-dot { width: 6px; height: 6px; }
-  .hero-copy { padding: 66px 18px 58px; }
+  .hero-copy { padding: 96px 18px 58px; }
   .hero h1, .intro h2, .section-heading h2, .programme h2, .why h2, .team h2, .contact h2 { font-size: clamp(46px, 13.2vw, 57px); }
   .lead { margin: 29px 0; font-size: 15px; line-height: 1.65; }
   .hero-actions { display: grid; justify-items: start; gap: 17px; }
